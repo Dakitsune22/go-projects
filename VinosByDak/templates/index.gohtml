@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinos by Dak</title>
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+<body>
+
+{{if .Nickname}}
+    <p><b>Projects by Dak: Vinos</b></p>
+    <p>Bienvenido {{.Nickname}}</p><br>
+    <img class="db20" src="/resources/images/db/{{.DBMS}}.png">
+    <BR><BR>
+    {{if eq .UserId "admin"}}
+        <p class="link"><a href="/userdata/registered">Gestionar usuarios</a></p>
+    {{else}}
+        <p class="link"><a href="/update?id={{.UserId}}">Modificar datos de usuario</a></p>
+        <p class="link"><a href="/changepwd?id={{.UserId}}">Cambiar password</a></p>
+    {{end}}
+    <p class="link"><a href="/logout/process">Cerrar sesión</a></p>
+    <br>
+{{else}}
+    <p><b>Projects by Dak: Vinos</b></p>
+    <BR><BR>
+    <p class="link"><a href="/login">Iniciar sesión</a></p><br>
+    <p class="link"><a href="/signup">Registrarse</a></p>
+{{end}}
+<br><br>
+<p class="link"><a href="/userdata/logged">Ver todos los usuarios conectados</a></p>
+
+</body>
+</html>

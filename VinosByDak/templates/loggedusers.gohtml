@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinos by Dak</title>
+    <link rel="stylesheet" type="text/css" href="../resources/main.css">
+</head>
+<body>
+
+<p><b>Usuarios conectados</b> (total):  <b>{{len .}}</b></p><br>
+<p>Por DBMS</p><br>
+<br>
+<img class="db10" src="/resources/images/db/postgres.png">
+{{$count := 0}}
+{{range .}}
+    {{if eq .DBMS "postgres"}}
+        <p>{{.UserId}}</p>
+        {{$count = iOne $count}}
+    {{end}}
+{{end}}
+Total: {{$count}}<br>
+<br><br>
+<img class="db10" src="/resources/images/db/mysql.png">
+{{$count := 0}}
+{{range .}}
+    {{if eq .DBMS "mysql"}}
+        <p>{{.UserId}}</p>
+        {{$count = iOne $count}}
+    {{end}}
+{{end}}
+Total: {{$count}}<br>
+<br><br>
+<img class="db10" src="/resources/images/db/mongodb.png">
+{{$count := 0}}
+{{range .}}
+    {{if eq .DBMS "mongodb"}}
+        <p>{{.UserId}}</p>
+        {{$count = iOne $count}}
+    {{end}}
+{{end}}
+Total: {{$count}}<br>
+<br><br>
+<p class="link"><a href="/">Volver al inicio</a></p>
+
+</body>
+</html>

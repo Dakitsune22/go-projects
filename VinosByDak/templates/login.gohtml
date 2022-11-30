@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinos by Dak</title>
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+<body>
+
+<p><b>Identifícate</b></p><br>
+<form method="post" action="/login/process">
+    <input type="text" name="id" placeholder="email" required autofocus><br>
+    <input type="password" name="password" placeholder="password" required><br>
+    <label for="dbms">Selecciona gestor de base de datos (DBMS):</label><br>
+    <select name="dbmsystem" id="dbms">
+        <option value="postgres">PostgreSQL</option>
+        <option value="mysql">MySQL</option>
+        <option value="mongodb">MongoDB</option>
+    </select>
+    <br><br>
+    <input type="submit" class="submit">
+</form>
+<br><br>
+<p class="link"><a href="/signup">Registrarse</a></p>
+
+</body>
+</html>

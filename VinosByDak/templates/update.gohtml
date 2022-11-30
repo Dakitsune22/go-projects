@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinos by Dak</title>
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+<body>
+
+<p><b>Modifica tus datos</b></p><br>
+<form method="post" action="/update/process?id={{.Id}}">
+    <label name="id">Id.: <b>{{.Id}}</b></label><br>
+    <input type="text" name="nickname" placeholder="nickname" required value="{{.Nickname}}"><br>
+    <input type="text" name="name" placeholder="name" value="{{.Name}}"><br>
+    <input type="text" name="fname" placeholder="first name" value="{{.Fname}}"><br>
+    <input type="text" name="lname" placeholder="last name" value="{{.Lname}}"><br>
+    <br><br>
+    <input type="submit" value="Enviar" class="submit">
+</form>
+<br><br>
+<p class="link"><a href="/">Volver al inicio</a></p>
+
+</body>
+</html>

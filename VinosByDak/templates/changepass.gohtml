@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinos by Dak</title>
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+<body>
+
+<p><b>Modifica tu password</b></p><br>
+<form method="post" action="/changepwd/process?id={{.}}">
+    <label name="id">Id.: <b>{{.}}</b></label><br>
+    <input type="password" name="pass" placeholder="password actual" required autofocus><br>
+    <input type="password" name="npass" placeholder="nuevo password" required><br>
+    <input type="password" name="rpass" placeholder="repite nuevo password" required><br>
+    <br><br>
+    <input type="submit" value="Enviar" class="submit">
+</form>
+<br><br>
+<p class="link"><a href="/">Volver al inicio</a></p>
+
+</body>
+</html>

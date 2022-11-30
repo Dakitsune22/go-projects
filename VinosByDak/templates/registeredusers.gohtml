@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinos by Dak</title>
+    <link rel="stylesheet" type="text/css" href="../resources/main.css">
+</head>
+<body>
+
+<p><b>Usuarios registrados:</b></p><br>
+<img class="db10" src="/resources/images/db/{{.DBMS}}.png"><br>
+{{range .Users}}
+    <p>{{.Id}} ({{.Nickname}}) 
+        <a class="link" href="/update?id={{.Id}}">   Modificar</a>
+        {{if ne .Id "admin"}}<a class="link" href="/delete/process?id={{.Id}}">   Eliminar</a>{{end}}
+    </p>
+{{end}}
+<br><br>
+<p class="link"><a href="/">Volver al inicio</a></p>
+
+</body>
+</html>
